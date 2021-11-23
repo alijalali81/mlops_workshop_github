@@ -118,11 +118,11 @@ Resources:
               commands:
                 - echo "Installing requirements"
                 - pip install --upgrade pip
-                - pip install -r source/requirements.txt
+                - pip install -r ../source/requirements.txt
             build:
               commands:
               - echo "Running test.py"
-              - python source/test.py "${AWS::StackName}" $CODEBUILD_RESOLVED_SOURCE_VERSION
+              - python ../source/test.py "${AWS::StackName}" $CODEBUILD_RESOLVED_SOURCE_VERSION
       TimeoutInMinutes: 30
 
 
